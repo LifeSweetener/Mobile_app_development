@@ -1,4 +1,4 @@
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="Всё это скриншоты с моего телефона") `Всё это скриншоты с моего телефона`
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="+") `Всё это скриншоты с моего телефона`
 # Mobile_app_development
 The repository inculdes results of university mobile apps works
 ## Список файлов practice3
