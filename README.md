@@ -1,3 +1,4 @@
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="+") `Прикреплённые изображения в директориях — это скриншоты с моего телефона с ОС Android 5.1.1 (Lollipop)`
 # Mobile_app_development
 The repository inculdes results of university mobile apps works
 ## Список файлов practice3
@@ -6,7 +7,6 @@ The repository inculdes results of university mobile apps works
 <li><p><b>rumireashaykopractice3.zip</b> — Это архив, где находится проект с выполненным заданием из третьей практики, где нужно просто (без возврата) передать данные из основной активити нашего приложения другой активити и обработать их там.<br><br>Прикреплённые фотографии являются частью этого проекта - это результат работы нашего приложения:  
 <ul><li>"Первое активити.png",</li>
     <li>"Предложение выбора целевого активити.png",</li> 
-    <li>"Второе активити.png".</li></ul><br><span><i>Всё это скриншоты с моего телефона</i></span></p></li>
+    <li>"Второе активити.png".</li></ul><br></p></li>
 <li><...></li>
 </ol>
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="+") `Всё это скриншоты с моего телефона`
