@@ -1,4 +1,3 @@
-![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="+") `Всё это скриншоты с моего телефона`
 # Mobile_app_development
 The repository inculdes results of university mobile apps works
 ## Список файлов practice3
@@ -10,3 +9,4 @@ The repository inculdes results of university mobile apps works
     <li>"Второе активити.png".</li></ul><br><span><i>Всё это скриншоты с моего телефона</i></span></p></li>
 <li><...></li>
 </ol>
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="+") `Всё это скриншоты с моего телефона`
