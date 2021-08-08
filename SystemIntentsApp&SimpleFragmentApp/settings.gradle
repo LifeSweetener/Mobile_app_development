@@ -1,0 +1,3 @@
+rootProject.name = "SystemIntentsApp"
+include ':app'
+include ':simplefragmentapp'
