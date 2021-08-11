@@ -34,20 +34,20 @@ import androidx.work.WorkRequest;<br><br>
 
 import android.os.Bundle;<br><br>
 
-public class MainActivity extends AppCompatActivity {<br><br>
+public class MainActivity extends AppCompatActivity {
 
-    @Override<br>
-    protected void onCreate(Bundle savedInstanceState) {<br>
-        super.onCreate(savedInstanceState);<br>
-        setContentView(R.layout.activity_main);<br>
-        Constraints constraints = new Constraints.Builder()<br>
-                .setRequiredNetworkType(NetworkType.CONNECTED)<br>
-                .build();<br><br>
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Constraints constraints = new Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .build();
 
-        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(MyWorker.class).setConstraints(constraints).build();<br>
-        WorkManager.getInstance(this)<br>
-                     .enqueue(uploadWorkRequest);<br>
-    }<br>
-        }</b></i>
+        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(MyWorker.class).setConstraints(constraints).build();
+        WorkManager.getInstance(this)
+                     .enqueue(uploadWorkRequest);
+    }
+        }
     </p></li>
   </ol></p>
