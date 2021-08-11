@@ -23,7 +23,7 @@ The repository inculdes results of university mobile apps works
   <li><p>Модуль <b>looper</b> — четвёртый модуль с очередным выполненным заданием практики, где нужно создать отдельный специальный поток <b>"Looper"</b>, который принимает сообщения с данными и обрабатывает их (одновременно с работой главного потока).</p></li>
   <li><p><b>workmanager</b> — модуль с пятым заданием, где используется компонент <b>"WorkManager"</b>, который управляет службами приложения, приостанавливая их при определённых условиях (отсутствии подключения к Интернету, процессе зарядки устройства), либо завершая, либо автоматически возобновляя их работу.</p>
     <p>Главный код (класса MainActivity) выглядит так:<br>
-      <i><b>package ru.mirea.shayko.workmanager;<br><br>
+      <i><b>@package ru.mirea.shayko.workmanager;<br><br>
 
 import androidx.appcompat.app.AppCompatActivity;<br>
 import androidx.work.Constraints;<br>
