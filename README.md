@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         WorkManager.getInstance(this)
                      .enqueue(uploadWorkRequest);
     }
-        }
-    @Override
-    </p></li>
+}
+        </p>
+        <p>В коде мы установили ограничение: если нет подключения к Интернету (посредством либо Wi-Fi, либо мобильной сети), то мы не запускаем метод <b>"doWork"</b> класса <b>"MyWorker"</b>. Если мы подключены к Интернету, то этот метод начинает выполняться.</p><p>Об этом можно судить, смотря на результат работы программы на скришотах (в папке <b>"screenshots" этого каталога</b>).</p></li>
   </ol></p>
