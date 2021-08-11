@@ -4,9 +4,9 @@
 The repository inculdes results of university mobile apps works
 
 ## ОПИСАНИЕ
-<p>В каталоге лежит проект <b>"practice4"<b>, в котором содержится пять модулей, плюс, в этом каталоге находится отдельный проект с выполненным завершающим эту практику контрольным заданием (шестым по счёту).</p>
+<p>В каталоге лежит проект <b>"practice4"</b>, в котором содержится пять модулей, плюс, в этом каталоге находится отдельный проект с выполненным завершающим эту практику контрольным заданием (шестым по счёту).</p>
   <h3>Список модулей</h3>
-  <p><ul>
+  <p><ol>
   <li><p><b>app</b> — это модуль, где решено самое первое задание практики — <b>"Thread"</b>.</p></li>
   <li><p><b>data_thread</b> — второе задание четвёртой практики, в котором нас знакомят с тремя Android-методами, позволяющими главному потоку приложения спокойно перерисовать UI-объект View без плохих последствий: <i>runOnUiThread()</i>, <i>post()</i> и <i>postDelayed()</i>. С их помощью дополнительные потоки, которые мы сами создаём, могут передать сообщение главному потоку, чтобы тот выполнил какую-нибудь задачу, часто связанную с визуальным изменением GUI.</p>
     <p>В программе сначала запустится метод runn1, потом runn2, а последним выполнится - runn3, которые перерисуют текстовую метку интерфейса.</p>
@@ -15,6 +15,39 @@ The repository inculdes results of university mobile apps works
 <p>Методы post() и postDelayed() полезны, когда у нас имеется множество разных View, и нам нужно все их перерисовать одновременно. Главный поток по очереди, друг за другом перерисовывает их, пока выполняются вычисления в нашем дополнительном потоке.</p>
     <p>Таким образом, наши дополнительные потоки передают сообщения главному UI-потоку, чтобы он выполнил визуальное редактирование элементов View, то есть так потоки могут общаться между собой.</p>
   </li>
-  <li><p><b>loadermanager</b> — </p>
+  <li><p><b>loadermanager</b> — в этом задании мы работаем с загрузчиком, который является вспомогательным компонентом нашего Android-приложения, с помощью которого наше приложение способно подгружать данные из сторонних хранилищ: баз данных, сетевых ресурсов, локальных файлов и т.п.</p>
+    <p>К этому модулю прикреплены в этом каталоге три скриншота с моего телефона (смотри в папке <b>"screenshots"</b>).</p>
+    <p>Для управления загрузчиками нашего приложения существует LoaderManager, который может запускать конкретный загрузчик для загрузки данных в приложение — <i>loaderManager.initLoader(LoaderID, bundle, this);</i> — и удалять его — <i>loaderManager.destroyLoader(LoaderID);</i>.</p>
+    <p>У нас в программе по нажатии кнопки пользовательского интерфейса (см. прикреплённые скриншоты) мы запускаем загрузчик, передаём ему данные (строку, которую ввёл пользователь в элемент EditText), он их у себя модифицирует (переставляет буквы строки местами) и возвращает нам. А мы в методе <i>onLoadFinished()</i>, который запускается после завершения загрузки данных загрузчиком, берём эту строку и вставляем в UI-элемент TextView.</p>
   </li>
-  </ul></p>
+  <li><p>Модуль <b>looper</b> — четвёртый модуль с очередным выполненным заданием практики, где нужно создать отдельный специальный поток <b>"Looper"</b>, который принимает сообщения с данными и обрабатывает их (одновременно с работой главного потока).</p></li>
+  <li><p><b>workmanager</b> — модуль с пятым заданием, где используется компонент <b>"WorkManager"</b>, который управляет службами приложения, приостанавливая их при определённых условиях (отсутствии подключения к Интернету, процессе зарядки устройства), либо завершая, либо автоматически возобновляя их работу.</p>
+    <p>Главный код (класса MainActivity) выглядит так:<br>
+      <i><b>package ru.mirea.shayko.workmanager;<br><br>
+
+import androidx.appcompat.app.AppCompatActivity;<br>
+import androidx.work.Constraints;<br>
+import androidx.work.NetworkType;<br>
+import androidx.work.OneTimeWorkRequest;<br>
+import androidx.work.WorkManager;<br>
+import androidx.work.WorkRequest;<br><br>
+
+import android.os.Bundle;<br><br>
+
+public class MainActivity extends AppCompatActivity {<br><br>
+
+    @Override<br>
+    protected void onCreate(Bundle savedInstanceState) {<br>
+        super.onCreate(savedInstanceState);<br>
+        setContentView(R.layout.activity_main);<br>
+        Constraints constraints = new Constraints.Builder()<br>
+                .setRequiredNetworkType(NetworkType.CONNECTED)<br>
+                .build();<br><br>
+
+        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(MyWorker.class).setConstraints(constraints).build();<br>
+        WorkManager.getInstance(this)<br>
+                     .enqueue(uploadWorkRequest);<br>
+    }<br>
+        }</b></i>
+    </p></li>
+  </ol></p>
