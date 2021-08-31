@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MireaProject</string>
+    <string name="navigation_drawer_open">Открыть навигационную панель</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="nav_header_title">Утилита для обучения Android разработке</string>
+    <string name="nav_header_subtitle">vk.com/timsaffron</string>
+    <string name="nav_header_desc">Панель навигации приложения</string>
+    <string name="action_settings">Настройки</string>
+
+    <string name="menu_home">Домой</string>
+    <string name="menu_gallery">Калькулятор</string>
+    <string name="menu_slideshow">Веб-браузер</string>
+    <string name="menu_musicplayer">MP3-плеер</string>
+</resources>
